@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple AWS Tutorials Image Upload</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="upload-card" aria-labelledby="form-title">
+      <img
+        class="logo"
+        src="SAT_Square_logo.jpg"
+        alt="Simple AWS Tutorials logo"
+      >
+
+      <div class="card-heading">
+        <p class="eyebrow">Image Upload Demo</p>
+        <h1 id="form-title">Upload Your Image</h1>
+        <p class="intro">
+          Enter your details, choose one JPG or PNG image up to 5 MB, and upload it securely using a presigned URL.
+        </p>
+      </div>
+
+      <form id="upload-form" novalidate>
+        <div class="field-group">
+          <label for="name">Name <span class="required-mark">*</span></label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            autocomplete="name"
+            required
+            aria-describedby="name-error"
+          >
+          <p class="field-error" id="name-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field-group">
+          <label for="email">Email <span class="required-mark">*</span></label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+            aria-describedby="email-error"
+          >
+          <p class="field-error" id="email-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field-group">
+          <label for="file">Select File <span class="required-mark">*</span></label>
+          <div class="file-picker-row">
+            <input
+              id="file"
+              name="file"
+              type="file"
+              accept=".jpg,.jpeg,.png,image/jpeg,image/png"
+              aria-describedby="file-help file-error"
+            >
+            <label class="file-button" for="file">Choose File</label>
+          </div>
+          <p class="file-help" id="file-help">Accepted formats: JPG, JPEG, PNG. Maximum size: 5 MB.</p>
+          <p class="selected-file" id="selected-file" aria-live="polite">No file selected.</p>
+          <p class="field-error" id="file-error" aria-live="polite"></p>
+        </div>
+
+        <div class="actions">
+          <button id="upload-button" type="submit">Upload</button>
+          <button id="clear-button" type="button" class="secondary">Clear</button>
+        </div>
+
+        <p id="status-message" class="status-message" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
