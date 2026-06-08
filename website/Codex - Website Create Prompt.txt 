@@ -1,0 +1,34 @@
+Create a simple website (HTML, CSS and JS) to allow users to upload images as per below specifications
+
+
+Form fields:
+1. Name --> Type = Text box, Required = Y, Purpose = Collect user's name 
+2. Email --> Type = Text box, Required = Y, Validation = Entered text should conform to email address validations, Purpose = Collect user's email address
+3. Select File --> Type = Button, Click action = Open file select dialog box
+4. Upload --> Type = Button, Click action = Submit the form
+5. Clear  -->  Type = Button, Click action = Clear form fields
+
+Style: 
+The webpage style should be modern with theme colors of the logo file (SAT_Square_logo.PNG) that I will upload. The website should include a logo image. The webpage should be designed as Single centered form.
+Do not use any external fonts.
+Any validation or required field errors should be written
+
+
+Image Validations:
+1. The webpage should restrict users to upload only JPG or PNG files
+2. Maximum size of uploaded image should be 5 MB
+3. For the demo purpose, only allow user to select one file at a time.
+4. No need to preview the image before submission
+
+
+When the form is submitted (click event of Upload Button):
+	1. Validate the selected image file using 'Image Validations' rules
+	2. If validation is successful, the page will call an API to get a pre-signed URL. The payload for the API call should include - Name, Email, FileName, ContentType and FileSize
+	I will specify API_URL in the JS file later. Just keep a placeholder for it.
+	3. The API successful response will contain uploadUrl
+	4. Parse the API response and read the presigned URL. presigned URL will be a S3 URL
+	5. PUT the file in the S3 bucket using the presigned URL
+	6. Write a message below the Upload and Clear buttons indicating file upload is successful. Use the same place to indicate if there are any errors when uploading the file. All errors in this process should be logged in the console.
+
+
+Ask any questions now before I uplod the SAT_Square_logo.PNG file..
