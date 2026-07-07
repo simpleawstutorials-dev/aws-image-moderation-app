@@ -22,7 +22,3 @@ API Gateway REST endpoint.
 
 - s3:PutObject
 - dynamodb:PutItem
-
-## Notes
-
-Replace all placeholder values with resources from your own AWS account.
